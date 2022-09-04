@@ -27,7 +27,8 @@ def game(request):
     # holt zufälliges Wort aus der Datenbanktabelle
     searchWord = GameWords.objects.order_by('?').first()
     # neue Datenbanktabelle erstellen und das searchword hier überschreiben
-    AktivWord.objects.create(word = request.POST[searchWord.word])
+    # AktivWord.objects.create(word = request.POST[searchWord.word])
+    AktivWord.objects.create(word = searchWord)
     print ('Recived data:', searchWord.word)
     wordLetters = []
     iterator = 0
