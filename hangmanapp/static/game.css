@@ -1,11 +1,21 @@
+.header {
+  min-width: 100vh;
+  text-align: center;
+  color: white;
+  font-size: 45px;
+  margin-bottom: 1vw;
+}
+
 body {
-    background-image: url("Tafel_neu.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* display: flex;
+  padding: 3vw;
+  background-image: url("Tafel_neu.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* display: flex;
     justify-content: center;
     align-items: center; */
-    min-height: 100vh;
+  min-height: 100vh;
+  font-family: cursive;
 }
 
 /* .wordLine {
@@ -17,32 +27,48 @@ body {
 } */
 
 .wordLine {
-    background-color: white;
-    grid-area: line;
-    margin-left: 2%;
-    height: 20px;
+  background-color: white;
+  grid-area: line;
+  margin-left: 2%;
+  height: 20px;
 }
 
 .wordLines {
-    /* display: flex; */
-
+  /* display: flex; */
 }
 
 .letter {
-    color: white;
-    font-size: 50px;
-    grid-area: letter;
-    margin-left: 37%;
+  color: white;
+  font-size: 50px;
+  grid-area: letter;
+  margin-left: 37%;
 }
 
 .gridElement {
-    display: grid;
-    grid-template-areas: 'letter'
-        'line';
+  display: grid;
+  grid-template-areas:
+    "letter"
+    "line";
 }
 
 .letterElement {
-    width: 8%;
-    float: left;
-    margin-left: 1%;
+  width: 8%;
+  float: left;
+  margin-left: 1%;
+}
+
+.game-container {
+  margin: auto;
+}
+
+.figure-container {
+  fill: transparent;
+  stroke: white;
+  stroke-width: 5px;
+  stroke-linecap: round;
+}
+
+.figure-part
+{
+    display: none;
 }
