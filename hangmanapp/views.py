@@ -1,15 +1,15 @@
 from django.shortcuts import render
 
-from hangmanapp.models import GameWords, ListItem
+from hangmanapp.models import AktivWord, GameWords, ListItem
 
 # Zum Rendern der HTML Dateien
 def hangman(request):
     if request.method == 'POST':
-        if request.POST['methode'] != 'check':
-            print('Recived data:', request.POST['itemName'])
-            ListItem.objects.create(name = request.POST['itemName'])
-        else: 
-            print('check Methode')
+        #if request.POST['methode'] != 'check':
+        print('Recived data:', request.POST['itemName'])
+        ListItem.objects.create(name = request.POST['itemName'])
+        #else: 
+        #    print('check Methode')
     # ListItem.objects.get(id=1)
     # ListItem.objects.filter(name='test')
     all_items = ListItem.objects.all()
@@ -27,6 +27,8 @@ def game(request):
     # holt zufälliges Wort aus der Datenbanktabelle
     searchWord = GameWords.objects.order_by('?').first()
     # neue Datenbanktabelle erstellen und das searchword hier überschreiben
+    AktivWord.objects.create(word = request.POST[searchWord.word])
+    print ('Recived data:', searchWord.word)
     wordLetters = []
     iterator = 0
 

@@ -28,3 +28,11 @@ class Player(models.Model):
     def __str__(self):
         return str(self.id) + ' ' + self.word
 
+
+# Model fuer Zwischenablage
+class AktivWord(models.Model): 
+    word = models.CharField(max_length=200)
+    hitLocations = models.CharField(max_length=200)
+    
+    def __str__(self):
+        return str(self.id) + ' ' + self.word
