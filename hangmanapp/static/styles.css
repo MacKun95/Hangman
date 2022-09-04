@@ -12,19 +12,6 @@ header {
     color: white;
 }
 
-button {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: blue;
-    border: unset;
-    font-size: 32px;
-    color: white;
-    position: absolute;
-    right: 16px;
-    bottom: 16px;
-}
-
 .list-item {
     background-color: white;
     height: 60px;
